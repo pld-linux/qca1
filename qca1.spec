@@ -1,13 +1,14 @@
+%define rname	qca
 Summary:	Qt Cryptographic Architecture (QCA) Library
 Summary(pl.UTF-8):	Biblioteka Qt Cryptographic Architecture (QCA)
-Name:		qca
+Name:		qca1
 Version:	1.0
-Release:	2
+Release:	1
 License:	LGPL v2.1
 Group:		Libraries
-Source0:	http://delta.affinix.com/qca/%{name}-%{version}.tar.bz2
+Source0:	http://delta.affinix.com/qca/%{rname}-%{version}.tar.bz2
 # Source0-md5:	ee44022eb0e5b8b5df64c62630f6e6b6
-Patch0:		%{name}-libs.patch
+Patch0:		%{rname}-libs.patch
 URL:		http://delta.affinix.com/qca/
 BuildRequires:	libstdc++-devel
 BuildRequires:	openssl-devel >= 0.9.7d
@@ -35,7 +36,7 @@ Qt Cryptographic Architecture (QCA) Library - development files.
 Biblioteka Qt Cryptographic Architecture (QCA) - pliki dla programistów.
 
 %prep
-%setup -q
+%setup -q -n %{rname}-%{version}
 %patch0 -p1
 
 %build
